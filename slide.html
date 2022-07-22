@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>Slideshow</title>
+	<link rel="stylesheet" href="slide.css">
+</head>
+<body>
+	<div class="wrapper">
+        <div id="container">
+            <img src="./493188dee481260d5c89790036be0e669f5287469802eca457586a25a096fd31.png">
+            <img src="./다운로드 (1).png">
+            <img src="./다운로드 (2).png">
+            <img src="./다운로드.png">
+            <button id="prev">&lang;</button>
+            <buttton id="next">&rang;</buttton>
+        </div>
+	</div>
+
+    <script>
+        const slides = document.querySelectorAll("#container > img");
+        const prev = document.querySelector("#prev");
+        const next = document.querySelector("#next");
+        let current = 0;
+
+        showSlide(current);
+        prev.addEventListener("click", prevSlide);
+        next.addEventListener("click", nextSlide);
+
+        function showSlide(n) {
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[n].style.display = "block"
+        }
+
+        function prevSlide() {
+            if (current > 0) current -= 1;
+            else current = slides.length - 1;
+            showSlide(current);
+        }
+
+        function nextSlide() {
+            if (current < slides.length - 1) current += 1;
+            else current = 0;
+            showSlide(current);
+        }
+
+    </script>
+	
+</body>
+</html>
