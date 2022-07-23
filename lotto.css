@@ -1,0 +1,89 @@
+/*웹폰트*/
+@font-face {
+    font-family: 'IM_Hyemin-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'IM_Hyemin-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Regular.woff2') format('woff');
+    font-weight: normal;
+	font-style: normal;
+}
+body{
+    width: 100%;
+    background-color: #eb9f9f;
+    position: relative;
+}
+
+.title{
+    font-family: 'IM_Hyemin-Bold';
+    font-size: 50px;
+    text-align: center; /*중앙에 위치하도록*/
+    color: #fff;
+}
+
+.rottoNum_wrap{
+    width: 1000px;
+    height: 550px;
+    background: url(/images/gui-2311258_1280.png) no-repeat; 
+    /*백그라운드 이미지 넣기, no-repeat : 반복 x */
+    background-size: 100%;
+    margin: 0 auto;
+    text-align: center; /*글자 중앙정렬*/
+    position: relative; /*plus(+) 위치 조정을 위해 relative설정*/
+}
+
+.ball{
+    border-radius: 100%; /*원형으로 만들기*/
+    background-color: #f1bbba;
+    width: 100px;
+    height: 100px;
+    display: inline-block; /*일자로 정렬하기 위해 적용*/
+    margin: 150px 10px 150px;
+    position: relative;
+}
+
+.ball span{ /*공안의 숫자 텍스트 부분 스타일적용*/
+    display: block;
+    font-family: 'IM_Hyemin-Regular';
+    font-size: 40px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.bonus{ /*보너스공 스타일 적용*/
+    margin-left: 50px;
+    background-color: #aed8ff;
+}
+
+.rottoNum_wrap .plus{ /*플러스 텍스트 스타일 적용*/
+    position: absolute;
+    display: inline-block;
+    font-family: 'IM_Hyemin-Regular';
+    font-size: 50px;
+    height: 100px;
+    top: 160px;
+}
+
+.btn_wrap{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.btn{ /*버튼 스타일 적용*/
+    border: none;
+    background-color: #a79c8e;
+    color: white;
+    font-family: 'IM_Hyemin-Regular';
+    font-size: 20px;
+    width: 150px;
+    height: 40px;
+    border-radius: 10px; /*모서리 둥글게*/
+}
+
+.btn:hover{ /*버튼 위에 마우스 올라갔을 때 스타일적용*/
+    background-color: #8a8277;
+    transition-duration:2s;
+}
